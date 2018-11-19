@@ -1,0 +1,34 @@
+{% extends 'productos/index.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+
+                        <th>Nombre del grado</th>
+                        <th>Opciones</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                  {% for grado in grado %}
+
+
+                      <td>{{ grado.nombre }}</td>
+                      <td><a class="btn btn-warning btn-sm" href="{% url 'detalle_grado' pk=grado.pk %}">mostrar</a>
+
+                      </td>
+
+
+
+
+
+                  </tr>
+{% endfor %}
+                </tbody>
+            </table>
+
+{% endblock %}
