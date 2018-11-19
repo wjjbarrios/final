@@ -16,7 +16,7 @@ def detalle_grado(request, pk):
 
 def Eliminar_grado(request, pk):
     grado = get_object_or_404(Grado, pk=pk)
-    producto.delete()
+    grado.delete()
     return redirect('lista_grado')
 
 def grado_nuevo(request):
